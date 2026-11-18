@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a Pickup | GreenLoop</title>
+<meta name="description" content="Schedule a GreenLoop waste collection for your home, business or community.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="css/style.css">
+</head>
+<body class="inner-page">
+<header class="site-header">
+ <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span><span>Green<span>Loop</span><small>SMARTER WASTE. CLEANER GHANA.</small></span></a>
+ <button class="menu-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+ <nav class="main-nav"><a href="index.html">Home</a><a href="services.html">Our Services</a><a href="how-it-works.html">How It Works</a><a href="../marketplace.php">Recycling Hub</a><a href="about.html">About</a></nav>
+ <a class="btn btn-primary nav-cta" href="request.html">Request a Pickup <i class="fa-solid fa-arrow-right"></i></a>
+</header>
+<main>
+<section class="request-section">
+ <div class="request-intro"><div class="eyebrow eyebrow-light">LET'S GET IT MOVING</div><h1 class="inner-title">Ready for a cleaner <em>space?</em></h1><p>Complete the form and submit your waste collection request. Keep your reference number safe so you can check your collection status later.</p><div class="request-note"><i class="fa-solid fa-shield-heart"></i><span><strong>Your details stay protected.</strong><small>Your phone number is used to verify your collection tracking request.</small></span></div></div>
+ <form id="requestForm" class="form-card">
+  <div class="form-heading"><div><span class="form-step">START A REQUEST</span><h2>Book a collection</h2></div><span class="required-note">* Required fields</span></div>
+  <div class="form-grid"><label>Full name *<input name="name" required placeholder="e.g. Ama Mensah"></label><label>Phone number *<input name="phone" required placeholder="e.g. 024 000 0000"></label><label>Region *<select name="region" required><option value="">Select region</option><option>Greater Accra</option><option>Central</option><option>Ashanti</option><option>Western</option><option>Eastern</option><option>Volta</option><option>Northern</option><option>Other</option></select></label><div class="full pickup-location"><div class="location-search" role="search"><label for="locationSearch">Search your pickup location</label><div class="location-search-controls"><input id="locationSearch" type="search" placeholder="Search an area, address or landmark" autocomplete="street-address"><button class="btn btn-primary" type="button" id="searchLocationButton"><i class="fa-solid fa-magnifying-glass"></i> Search</button></div><small>Search for a place in Ghana, then choose a result to pin it on the map.</small><div id="locationSearchStatus" class="location-search-status" aria-live="polite"></div><div id="locationSearchResults" class="location-search-results" role="list" aria-label="Location search results"></div></div><div class="map-heading"><strong>Pin pickup location on map *</strong><small>Click the map to place a pin, drag the pin to adjust, or drag the map to explore.</small></div><div id="requestMap" class="pickup-map" aria-label="Interactive map for selecting a pickup location"></div><p id="mapLocationStatus" class="map-status" aria-live="polite">Select a location on the map or use GPS.</p></div><label>Waste category *<select name="category" required><option value="">Choose category</option><option>Plastic</option><option>Paper</option><option>Organic waste</option><option>Metal</option><option>Glass</option><option>Electronic waste</option><option>General waste</option></select></label><label>Estimated quantity<input name="quantity" placeholder="e.g. 3 bags / 20 kg"></label><label>Preferred date<input type="date" name="preferred_date" min=""></label><label>Preferred time<select name="preferred_time"><option value="">Flexible</option><option>Morning (8am–12pm)</option><option>Afternoon (12pm–4pm)</option><option>Evening (4pm–6pm)</option></select></label><label class="full">Additional instructions<textarea name="notes" rows="3" placeholder="Anything the collection team should know?"></textarea></label></div>
+  <input type="hidden" name="address" id="requestAddress"><input type="hidden" name="latitude" id="requestLat"><input type="hidden" name="longitude" id="requestLng">
+  <button type="button" class="location-btn" id="getLocation"><i class="fa-solid fa-location-crosshairs"></i> Add my current GPS location <span id="locationStatus">Optional</span></button>
+  <button class="btn btn-primary submit-btn" type="submit">Submit collection request <i class="fa-solid fa-arrow-right"></i></button><div class="form-message" id="requestMessage" role="status"></div><small class="privacy-note">By submitting, you agree that GreenLoop may use these details to coordinate your collection.</small>
+ </form>
+</section>
+</main>
+<footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span><span>Green<span>Loop</span><small>SMARTER WASTE. CLEANER GHANA.</small></span></a><p>Making waste management more connected, convenient and responsible.</p><div class="footer-links"><a href="services.html">Services</a><a href="track.html">Track collection</a><a href="../marketplace.php">Recycling hub</a><a href="../report.php">Report an issue</a><a href="../admin-login.php">Administrator</a><a href="../driver-login.php">Driver portal</a></div><small>© 2026 GreenLoop. Built for cleaner communities.</small></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="js/app.js"></script>
+</body></html>
